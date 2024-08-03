@@ -18,7 +18,7 @@ function depends_hurstythemes() {
     fi
 }
 
-function install_theme_hurstythemes() {
+function install_theme_hurstythemes() { $ES_dir_themes
     local theme="$1"
     local repo="$2"
 		local destination="$3"
@@ -38,7 +38,7 @@ function install_theme_hurstythemes() {
 		}
 }
 
-function uninstall_theme_hurstythemes() {
+function uninstall_theme_hurstythemes() { $ES_dir_themes
     local theme="$1"
 		local destination="$2"
     if [[ -d "$destination/$theme" ]]; then
@@ -256,14 +256,14 @@ function gui_hurstythemes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -552,14 +552,14 @@ function sweet_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -729,14 +729,14 @@ function cool_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -957,14 +957,14 @@ function spin_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -1133,14 +1133,14 @@ function 16x9_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -1204,14 +1204,14 @@ function 5x4_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -1460,14 +1460,14 @@ function toggleboxy_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -1518,14 +1518,14 @@ function vertical_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -1707,14 +1707,14 @@ function chromeyblue_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -1896,14 +1896,14 @@ function chromeygreen_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -2086,14 +2086,14 @@ function chromeyneon_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -2173,14 +2173,14 @@ function hurstypicks_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -2241,14 +2241,14 @@ function handheld_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -2326,14 +2326,14 @@ function slick_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -2559,14 +2559,14 @@ function hyper_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -2637,14 +2637,14 @@ function mario_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -2730,14 +2730,14 @@ function GPi_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -2797,14 +2797,14 @@ function Comic_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -2952,14 +2952,14 @@ function Adios_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -3085,14 +3085,14 @@ function Slanty_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -3254,14 +3254,14 @@ function Community_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -3464,14 +3464,14 @@ function SmoothyUno_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
@@ -3638,14 +3638,14 @@ function SmoothyDuo_themes() {
                     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
                     case "$choice" in
                         1)
-                            install_theme_hurstythemes "$theme" "$repo"
+                            install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                             ;;
                         2)
-                            uninstall_theme_hurstythemes "$theme"
+                            uninstall_theme_hurstythemes "$theme" $ES_dir_themes
                             ;;
                     esac
                 else
-                    install_theme_hurstythemes "$theme" "$repo"
+                    install_theme_hurstythemes "$theme" "$repo" $ES_dir_themes
                 fi
                 ;;
         esac
